@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #4A90E2;
+  --color-secondary: #FF9500;
+  --color-accent: #10b981;
+  
+  --shadow-bento: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-slate-800 bg-[#f8fafc];
+  }
+}
+
+@layer components {
+  .card-bento {
+    @apply bg-white rounded-[16px] shadow-bento border border-slate-200/80 transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply px-5 py-2.5 rounded-xl bg-gradient-to-br from-[#4A90E2] to-[#FF9500] text-white font-bold transition-all hover:opacity-90 active:scale-95 shadow-lg shadow-primary/20 cursor-pointer;
+  }
+  
+  .btn-ghost {
+    @apply px-4 py-2 rounded-xl text-slate-500 hover:bg-slate-100 transition-all font-semibold;
+  }
+
+  .bento-inner-shadow {
+    @apply shadow-[inset_0_2px_4px_rgba(0,0,0,0.05)];
+  }
+}
